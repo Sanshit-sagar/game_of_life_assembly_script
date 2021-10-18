@@ -1,0 +1,28 @@
+{
+  "name": "game_of_life",
+  "version": "1.0.0",
+  "description": "game of life with assembly script",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests",
+    "asbuild:untouched": "asc assembly/index.ts --target debug",
+    "asbuild:optimized": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanshit-sagar/game_of_life_assembly_script.git"
+  },
+  "author": "Sanshit Sagar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sanshit-sagar/game_of_life_assembly_script/issues"
+  },
+  "homepage": "https://github.com/Sanshit-sagar/game_of_life_assembly_script#readme",
+  "dependencies": {
+    "@assemblyscript/loader": "^0.19.17"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.19.17"
+  }
+}

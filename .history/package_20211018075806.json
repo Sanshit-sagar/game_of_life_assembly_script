@@ -1,0 +1,27 @@
+{
+  "name": "game_of_life",
+  "version": "1.0.0",
+  "scripts": {
+    "asbuild:untouched": "asc assembly/index.ts -b build/untouched.wasm -t build/untouched.wat --use Math=JSMath --runtime stub --importMemory --sourceMap --debug --measure",
+    "asbuild:optimized": "asc assembly/index.ts -b build/optimized.wasm -t build/optimized.wat -d build/optimized.d.ts --use Math=JSMath -O3 --runtime stub --importMemory --sourceMap --measure",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
+    "start": "npx serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanshit-sagar/game_of_life_assembly_script.git"
+  },
+  "author": "Sanshit Sagar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sanshit-sagar/game_of_life_assembly_script/issues"
+  },
+  "homepage": "https://github.com/Sanshit-sagar/game_of_life_assembly_script#readme",
+  "dependencies": {
+    "@assemblyscript/loader": "^0.19.17"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.19.17",
+    "http-server": "^13.0.2"
+  }
+}
